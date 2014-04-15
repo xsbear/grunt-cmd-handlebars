@@ -1,5 +1,5 @@
-define("test/fixtures/handlebars_compile.js", ["handlebars"], function(require, exports, module) {
-  var Handlebars = require("handlebars");
+define("test/fixtures/handlebars_compile.js", ["handlebars/1.3.1/runtime"], function(require, exports, module) {
+  var Handlebars = require("handlebars/1.3.1/runtime");
   this["JST"] = this["JST"] || {};
 
 this["JST"]["handlebars_compile/description"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

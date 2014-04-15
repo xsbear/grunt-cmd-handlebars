@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     cmd_handlebars: {
       tests: {
         options: {
-          handlebars_id: 'handlebars',
+          handlebars_id: 'handlebars/1.3.1/runtime',
           exports: 'this["JST"]',
         },
         files: [{

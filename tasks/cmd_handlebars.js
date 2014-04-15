@@ -16,8 +16,8 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('cmd_handlebars', 'Wrap Handlebars precompiling file to CMD module.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      handlebars_id: 'handlbars',
-      exports: 'this["JST"]'
+      handlebars_id: '',
+      exports: ''
     });
 
     // Iterate over all specified file groups.
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         '})'
       ].join('\n');
 
-      // Wrap handlbars file to cmd
+      // Wrap handlebars file to cmd
       var src = f.src.filter(function(filepath) {
         // Warn on and remove invalid source files (if nonull was set).
         if (!grunt.file.exists(filepath)) {

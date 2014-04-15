@@ -41,15 +41,13 @@ grunt.initConfig({
 
 #### options.handlebars_id
 Type: `String`
-Default value: `'handlebars'`
 
-Dependency module's id of handlebars runtime.
+Dependency module's id of handlebars runtime, like `'handlebars/1.3.1/runtime'`.
 
 #### options.exports
 Type: `String`
-Default value: `'this["JST"]'`
 
-Exports of output cmd handlebars.
+Exports of output cmd handlebars, like `'this["JST"]'`. If use [grunt-contrib-handlebars](https://github.com/gruntjs/grunt-contrib-handlebars) to precompile handlebars templates, please inehrit of the [namespace](https://github.com/gruntjs/grunt-contrib-handlebars#namespace) option.
 
 ### Usage Examples
 ```js
@@ -57,7 +55,7 @@ grunt.initConfig({
   cmd_handlebars: {
     tests: {
       options: {
-        handlebars_id: 'handlebars',
+        handlebars_id: 'handlebars/1.3.1/runtime',
         exports: 'this["JST"]',
       },
       files: [{
@@ -72,6 +70,10 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+**Apr 15, 2014** `0.1.1`
+
+Remove default options, force user specify self options.
+
 **Apr 15, 2014** `0.1.0`
 
 First release.
